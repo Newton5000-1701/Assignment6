@@ -70,7 +70,7 @@ E_y = -y_partial(V, X, Y, x1, x2, y1, y2, dy)
 
 # Plot electric potential with masked regions to avoid singularities
 pp.figure(figsize=(8, 6))
-pp.contourf(X, Y, V_total, cmap='inferno', levels=50)
+pp.contour(X, Y, V_total, cmap='inferno', levels=1000)
 pp.colorbar(label="Electric Potential (V)")
 pp.xlabel("x (m)")
 pp.ylabel("y (m)")
