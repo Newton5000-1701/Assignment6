@@ -95,7 +95,7 @@ E_y_reduced = np.where(mask, E_y_norm, np.nan)
 #Plotting the direction with quiver and magnitude with contour
 
 pp.figure(figsize=(8, 6))
-contour = pp.contourf(X, Y, E_magnitude, cmap='Spectral', levels=100)
+contour = pp.contour(X, Y, E_magnitude, cmap='Spectral', levels=1000)
 pp.colorbar(contour, label="Electric Field Magnitude (V/m)")
 pp.quiver(X, Y, E_x_reduced, E_y_reduced, color='black', scale=35, width=0.003)
 pp.xlabel("x (m)")
